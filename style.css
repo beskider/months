@@ -1,19 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
-section {
-    position: relative;
-    width: 100%;
+.content {
     height: 100vh;
     overflow: hidden;
-    background: #000200;
+    background: #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+#month, #year {
+    margin-bottom: 1rem;
+    color: 000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4rem;
+    background-color: rgba(238, 245, 255, 0.767);
+}
+
+#calendar {
+    width: 80vw;
+    border-radius: 5px;
+    height: 80vh;
+    background-color: rgba(0, 0, 120, 0.767);
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    animation: animate 25s ease-in-out infinite;
+
+}
+
+.star1 {
+    animation-delay: 0s;
+    background: url('img/stars1.jpg');
+}
+
+.star2 {
+    animation-delay: -1s;
+    background: url('img/stars2.jpg');
+}
+.star3 {
+    animation-delay: -2s;
+    background: url('img/stars3.jpg');
+}
+
+.star4 {
+    animation-delay: -3s;
+    background: url('img/stars4.jpg');
+}
+.star5 {
+    animation-delay: -4s;
+    background: url('img/stars5.jpg');
+}
+
+
+@keyframes animate {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        opacity: 0;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        opacity: 0.6;
+    }
+}
+
